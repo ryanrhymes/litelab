@@ -179,4 +179,5 @@ pass
 if __name__=="__main__":
     config = ConfigReader(sys.argv[1])
     print config.get_vrouters(config.argsdict['topology'])
+    print config.argsdict['logdir']
     sys.exit(0)
