@@ -92,6 +92,9 @@ class green_nbsearch_cachedbit_linkoff(object):
         found = False
         if hdr.ttl > 0:
             for nb, bf in self.nbbf.items():
+                # Skip if the link to that neighbour is off
+                if self.router.ltable[nb] == 0:
+                    continue
                 # There is no need to query the next hop
                 if hdr.id in bf and nb != self.router.rtable[hdr.dst]:
                     hdr.type = MessageType.QUERY

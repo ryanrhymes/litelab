@@ -38,6 +38,7 @@ class Router(object):
         self.iport     = args['iport']               # port for incoming message
         self.routers   = set()
         self.manager   = Manager()
+        self.ltable    = self.manager.dict()         # table stores link on/off states
         self.rtable    = self.manager.dict()
         self.pathdict  = {}                          # a dict contains all the hops in each path
         self.topology  = {}                          # a dict contains all the links and link properties
