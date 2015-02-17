@@ -29,9 +29,9 @@ def parse_log(ifn):
         if d is None:
             continue
 
-        ### if float(d['ts']) >= START_TIME + week * SCALE_FACTOR:
-
         ti = int(float(d['ts']) - START_TIME) / SCALE_FACTOR
+        if ti > 24 * 7 - 1:
+            continue
         arr.append( (ti, int(d['src']), int(d['dst'])) )
 
     return ifn, arr
@@ -64,6 +64,7 @@ def parse_all(ifns):
         try:
             ifn, arr = it.next()
             output_log(ifn, arr)
+            print "processed", ifn, '...'
         except StopIteration:
             break
     pass
