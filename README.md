@@ -5,4 +5,4 @@ LiteLab: A light-weight platform for large-scale networking experiments. The pla
 
 Technical report: "<a href="http://www.cs.helsinki.fi/u/jakangas/LiteLab/litelab-embedded.pdf">LiteLab: Efficient Large-scale Network Experiments</a>"
 
-Official website: <a href="http://www.cs.helsinki.fi/u/jakangas/LiteLab/">LiteLab @ Dept. of Computer Science, Univ. of Helsinki</a>
+Official website: <a href="http://www.cl.cam.ac.uk/~lw525/LiteLab/">LiteLab @ Computer Laboratory, Cambridge University</a>
